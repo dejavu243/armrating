@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3.8.8-buster as base
 
 RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
@@ -10,7 +10,7 @@ WORKDIR /app
 
 # install requirements
 RUN update-ca-certificates \
-pip install -r requirements.txt
+&& pip install -r requirements.txt
 
 FROM base as app
 
@@ -20,5 +20,5 @@ WORKDIR /app
 COPY ./ /app/
 
 # run server
-CMD python manage.py runserver
+CMD python manage.py migrate && python manage.py runserver
 

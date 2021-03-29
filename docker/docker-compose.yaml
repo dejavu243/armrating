@@ -1,4 +1,4 @@
-version: '1.0'
+version: '3.7'
 services:
   postgres:
     image: postgres:13
@@ -12,7 +12,7 @@ services:
     ports:
       - 5432:5432
 
-  backend:
+  back_end:
     restart: on-failure
     build:
       context: ..
@@ -23,7 +23,7 @@ services:
       - postgres
     ports:
       - 5000:5000
-    command: python manage.py runserver
+    command: python manage.py runserver 0.0.0.0:5000
     environment:
       PYTHONUNBUFFERED: 1
       HOST: 0.0.0.0

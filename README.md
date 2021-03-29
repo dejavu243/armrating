@@ -4,12 +4,14 @@
 Project for armwrestling competitions
 
 ---
+### Create VENV (Optional)
+    virtualenv venv
+####
+    venv\Scripts\activate.bat
 ### Starting project
-
-    cd armrating 
+    cd docker
 ####
-    pip3 install django
+    docker-compose build
 ####
-    python manage.py migrate
+    docker-compose up back_end
 ####
-    python manage.py runserver
