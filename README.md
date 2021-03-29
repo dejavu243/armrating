@@ -15,3 +15,4 @@ Project for armwrestling competitions
 ####
     docker-compose up back_end
 ####
+####Project starts at 127.0.0.1:5000
