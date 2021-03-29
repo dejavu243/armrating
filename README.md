@@ -15,11 +15,11 @@ Project for armwrestling competitions
 ####
     docker-compose up back_end
 ####
-####Project starts at 127.0.0.1:5000
+#### Project starts at 127.0.0.1:5000
 ## Starting project without Docker
     pip install -r requirements.txt
 ####
     python manage.py migrate
 ####
     python manage.py runserver
-####Project starts at 127.0.0.1:8000
+#### Project starts at 127.0.0.1:8000
